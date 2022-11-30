@@ -27,7 +27,8 @@ services:
     build:
       dockerfile: web.Dockerfile
     volumes:
-      - ./web:/app
+      - ./web/public:/app/public
+      - ./web/src:/app/src
     ports:
       - "3000:3000"
     depends_on:
